@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>タイトル</title>
+</head>
+
+<body>
+    <a href="/">ホーム</a>
+    {% if user.is_authenticated %}
+        <a href="{% url 'account_logout' %}">ログアウト</a>
+    {% else %}
+        <a href="{% url 'account_signup' %}">サインアップ</a>
+        <a href="{% url 'account_login' %}">ログイン</a>
+    {% endif %}
+
+    <main>
+          {% block content %}
+          {% endblock %}
+    </main>
+
+    {% block extra_js %}
+    {% endblock %}
+
+</body>
+
+</html>

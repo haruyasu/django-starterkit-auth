@@ -1,0 +1,26 @@
+{% extends "app/base.html" %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<h5>サインアップ</h5>
+<form method="post">
+    {% csrf_token %}
+    <div>
+        {% render_field form.company class="form-control" placeholder="会社名" %}
+    </div>
+    <div>
+        {% render_field form.email class="form-control" placeholder="メールアドレス" %}
+    </div>
+    <div>
+        {% render_field form.password1 class="form-control" placeholder="パスワード" %}
+    </div>
+    <div>
+        {% render_field form.password2 class="form-control" placeholder="パスワード(確認)" %}
+    </div>
+    <div>
+        <button type="submit">サインアップ</button>
+    </div>
+</form>
+
+{% endblock %}

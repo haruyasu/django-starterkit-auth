@@ -1,0 +1,2 @@
+# qrlog
+# django-starterkit-auth

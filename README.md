@@ -1,2 +1,7 @@
-# qrlog
-# django-starterkit-auth
+# Djangoスターターキット
+
+* メールログイン
+* ログアウト
+* サインアップ
+* No CSS
+
